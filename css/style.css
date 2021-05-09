@@ -1,0 +1,205 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 140%;
+    color: rgb(199, 199, 199);
+}
+
+body{
+    background-image: url("/images/space.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: black;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 200px;
+}
+
+nav{
+    font-family: 'Space Mono', monospace;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.699);
+}
+.navLink{
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+}
+.navLink a{
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+.navLink a:hover{
+    color: rgb(100, 100, 100);
+}
+.navLink li{
+    list-style: none;
+}
+
+
+.logo{
+    font-size: 4vh;
+    letter-spacing: 10px;
+    text-decoration: none;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color: rgb(199, 199, 199);
+    margin: 4px;
+}
+
+.mainQuote{
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 20%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.mainQuote p{
+    font-size: 2vh;
+    font-weight: 200;
+    letter-spacing: 2px;
+    margin: 20px;
+}
+
+.divContainer{
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.divContainer p{
+    font-size: 18px;
+    font-weight: 200;
+    margin: 10px;
+}
+.divContainer h2{
+    font-size: 24px;
+    font-weight: 400;
+    margin: 20px;
+}
+.divContainer a{
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+}
+
+.row{
+    position: absolute;
+    background-color: black;
+    bottom: 0;
+    width: 100%;
+}
+.column{
+    text-align: center;
+}
+.column a{
+    margin: 30px;
+    display: block;
+}
+.socials{
+    text-align: center;
+    margin: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+a{
+    text-decoration: none;
+}
+.btn{
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button{
+    background-color: black;
+    color: rgb(199, 199, 199);
+    border: 2px solid rgb(199, 199, 199);
+    padding: 10px 30px;
+    border-radius: 8px;
+    transition-duration: 0.5s;
+}
+.button:hover{
+    background-color: rgb(199, 199, 199);
+    color: black;
+}
+label, input[type=text], textarea{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 5px;
+    border: 2px solid rgb(199, 199, 199);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+textarea{
+    min-height: 200px;
+    min-width: 100%;
+    max-width: 100%;
+}
+input[type=submit]{
+    background-color: rgb(199, 199, 199);
+    color: black;
+    border: 2px solid rgb(199, 199, 199);
+    padding: 10px 30px;
+    border-radius: 8px;
+    transition-duration: 0.5s;
+}
+input[type=submit]:hover{
+    background-color: black;
+    color: rgb(199, 199, 199);
+}
+.formError{
+    display: none;
+    color: red;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+main{
+    width: 80%;
+    margin: 50px auto;
+}
+
+
+@media screen and (max-width: 1024px){
+    .navLink{
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    body {
+        overflow-x: hidden;
+    }
+    .navLink{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        top: 10vh;
+        height: 70vh;
+        background-color: black;
+        transform: translateX(100%);
+    }
+    .burger{
+        display: block;
+    }
+}
+
+.navActive{
+    transform: translateX(0%);
+}
